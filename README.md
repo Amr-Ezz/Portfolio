@@ -15,9 +15,9 @@
   <img src="https://drive.google.com/uc?id=1sqFUunvry6mPu-9xqZUMbsTgTqSmPatE">
   <img src="https://drive.google.com/uc?id=1ACF4MfVwrMUCfT_3zYHhPTOUnJ0cDzhV">
   <img src="https://drive.google.com/uc?id=1U9MpZgISv-ogV39RhGNKORnbIxnaV--P">
-  <img src="https://drive.google.com/uc?id=1sqFUunvry6mPu-9xqZUMbsTgTqSmPatE">
+  <!-- <img src="https://drive.google.com/uc?id=1sqFUunvry6mPu-9xqZUMbsTgTqSmPatE">
   <img src="https://drive.google.com/uc?id=1ACF4MfVwrMUCfT_3zYHhPTOUnJ0cDzhV">
-  <img src="https://drive.google.com/uc?id=1U9MpZgISv-ogV39RhGNKORnbIxnaV--P">
+  <img src="https://drive.google.com/uc?id=1U9MpZgISv-ogV39RhGNKORnbIxnaV--P"> -->
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
