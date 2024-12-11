@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3c59a23c8ec879707f6f0f452782940f83beeebed2ec17d26ab7688d488b25d2
-size 638
+import MailchimpSubscribe from "react-mailchimp-subscribe";
+
+import React from "react";
+import Newsletter from "./Newsletter";
+
+const MailchimpForm = () => {
+  const postUrl = `${process.env.REACT_APP_MAILCHIMP_URL}?u=${process.env.REACT_APP_MAILCHIMP_U}?id=${process.env.REACT_APP_MAILCHIMP_ID}`;
+  return (
+    <>
+      <MailchimpSubscribe
+        url={postUrl}
+        render={({ subscribe, status, message }) => (
+          <Newsletter
+            status={status}
+            message={message}
+            onValidated={(FormData) => subscribe(FormData)}
+          />
+        )}
+      />
+    </>
+  );
+};
+
+export default MailchimpForm;

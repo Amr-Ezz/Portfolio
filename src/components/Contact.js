@@ -1,3 +1,120 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:67bf549b34ead7872e23031320c9ad7300c1a58f0fd1696f667d4c5b1faddedc
-size 3672
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import contactImg from "../assets/contact-img.svg";
+
+const Contact = () => {
+  const formInitialDetails = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  };
+
+  const [formDetails, setFormDetails] = useState(formInitialDetails);
+  const [buttonText, setButtonText] = useState("Send");
+  const [status, setStatus] = useState({});
+
+  const onFormUpdate = (category, value) => {
+    setFormDetails({
+      ...formDetails,
+      [category]: value,
+    });
+  };
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    setButtonText('sending...');
+    let response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json;charset=utf-8",
+      },
+      body: JSON.stringify(formDetails),
+    });
+    setButtonText("Send");
+    let result = response.json();
+    setFormDetails(formInitialDetails);
+    if(result.code === 200) {
+      setStatus({success: true, message: "Message sent successfully"})
+    } else {
+      setStatus({success: false, message: "something went wrong, please try again later"})
+    }
+    
+  };
+
+  return (
+    <section className="contact" id="connect">
+      <Container>
+        <Row className="align-items-center">
+          <Col md={6}>
+            <img src={contactImg} alt="Contact Us" />
+          </Col>
+          <Col md={6}>
+            <h2>Get In Touch</h2>
+            <form>
+              <Row>
+                <Col sm={6} className="px-1">
+                  <input
+                    type="text"
+                    value={formDetails.firstName}
+                    placeholder="first Name"
+                    onChange={(e) => onFormUpdate("first Name", e.target.value)}
+                  />
+                </Col>
+                <Col sm={6} className="px-1">
+                  <input
+                    type="text"
+                    value={formDetails.lastName}
+                    placeholder="last Name"
+                    onChange={(e) => onFormUpdate("last Name", e.target.value)}
+                  />
+                </Col>
+                <Col sm={6} className="px-1">
+                  <input
+                    type="text"
+                    value={formDetails.email}
+                    placeholder="Email Address"
+                    onChange={(e) => onFormUpdate("email", e.target.value)}
+                  />
+                </Col>
+                <Col sm={6} className="px-1">
+                  <input
+                    type="text"
+                    value={formDetails.phone}
+                    placeholder="Phone No."
+                    onChange={(e) => onFormUpdate("phone", e.target.value)}
+                  />
+                </Col>
+                <Col>
+                  <textarea
+                    row="6"
+                    value={formDetails.message}
+                    placeholder="message"
+                    onChange={(e) => onFormUpdate("message")}
+                  />
+                  <button type="submit">
+                    <span>{buttonText}</span>
+                  </button>
+                </Col>
+                {status.message && 
+                  <Col>
+                    <p
+                      className={
+                        status.success === false ? "danger" : "success"
+                      }
+                    >
+                      {status.message}
+                    </p>
+                  </Col>
+                }
+              </Row>
+            </form>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
+};
+
+export default Contact;

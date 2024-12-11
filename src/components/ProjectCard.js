@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e4e378b16b6c52fdc53d8c6e0b97f0ece6ec4393018d2633b167d4594be0581c
-size 453
+import React from 'react';
+import { Col } from 'react-bootstrap';
+import "./ProjectCard.css";
+
+const ProjectCard = ({title, description, imgUrl}) => {
+  return ( 
+    <Col sm={6} md={4}>
+        <div className='proj-imgbx'>
+            <img src={imgUrl} alt="Project Card" />
+            <div className='proj-txtx'>
+                <h4>{title}</h4>
+                <span>{description}</span>
+            </div>
+        </div>
+    </Col>
+  )
+}
+
+export default ProjectCard;
