@@ -85,7 +85,7 @@ const Projects = () => {
                   }
                 >
                   <h2>Projects</h2>
-                  <p>
+                  {/* <p>
                     <ul>
                       <li>
                         <a href="https://github.com/Amr-Ezz/E-Shop">https://github.com/Amr-Ezz/E-Shop</a>:{" "}
@@ -99,7 +99,7 @@ const Projects = () => {
                         <a href="https://github.com/Amr-Ezz/Resturant">https://github.com/Amr-Ezz/Resturant</a>
                       </li>
                     </ul>
-                  </p>
+                  </p> */}
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"
