@@ -7,6 +7,7 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import Resturant from "../assets/Resturant-Screen-Portfolio.png";
 import Ecommerce from "../assets/E-Commerce.png";
+import Anime from "../assets/Anime.png";
 import Ecommerce1 from "../assets/E-Commerce1.png";
 import Ecommerce2 from "../assets/E-Commerce2.png";
 import NFTimage from "../assets/NFTGameHub.png";
@@ -18,55 +19,55 @@ import EShop3 from "../assets/E-shop3.png";
 
 const Projects = () => {
   const projects = [
- 
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Go Shop",
+      description:
+        "Designed and launched a scalable e-commerce platform using React and Firebase achieving 98% user authentication reliability",
       imgUrl: EShop,
     },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: EShop1,
+    // },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: EShop2,
+    // },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: EShop3,
+    // },
     {
       title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: EShop1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: EShop2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: EShop3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
+      description: "Discover the latest electronics with our sleek e-commerce site built using Sanity and React Context. Enjoy a fast, seamless shopping experience for all your tech needs!",
       imgUrl: Ecommerce,
     },
 
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: Ecommerce1,
+    // },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: Ecommerce2,
+    // },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: Ecommerce1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: Ecommerce2,
-    },
-    {
-      title: "Business Startup",
+      title: "GameHub",
       description: "Design & Development",
       imgUrl: NFTimage1,
     },
     {
-      title: "Business Startup",
+      title: "AstroAnime",
       description: "Design & Development",
-      imgUrl: NFTimage,
+      imgUrl: Anime,
     },
     {
-      title: "Business Startup",
+      title: "Resturant Startup",
       description: "Design & Development",
       imgUrl: Resturant,
     },
@@ -155,7 +156,11 @@ const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-img-right" src={colorSharp2} alt="Background" />
+      <img
+        className="background-img-right"
+        src={colorSharp2}
+        alt="Background"
+      />
     </section>
   );
 };
