@@ -8,14 +8,9 @@ import TrackVisibility from "react-on-screen";
 import Resturant from "../assets/Resturant-Screen-Portfolio.png";
 import Ecommerce from "../assets/E-Commerce.png";
 import Anime from "../assets/Anime.png";
-import Ecommerce1 from "../assets/E-Commerce1.png";
-import Ecommerce2 from "../assets/E-Commerce2.png";
-import NFTimage from "../assets/NFTGameHub.png";
 import NFTimage1 from "../assets/NFTGameHub1.png";
 import EShop from "../assets/E-Shop.png";
-import EShop1 from "../assets/E-Shop1.png";
-import EShop2 from "../assets/E-Shop2.png";
-import EShop3 from "../assets/E-shop3.png";
+import AI from "../assets/AI.png";
 
 const Projects = () => {
   const projects = [
@@ -24,12 +19,17 @@ const Projects = () => {
       description:
         "Designed and launched a scalable e-commerce platform using React and Firebase achieving 98% user authentication reliability",
       imgUrl: EShop,
+      githubRepo: "https://github.com/Amr-Ezz/E-Shop",
+      liveDemo: "https://e-shop-virid-kappa.vercel.app",
     },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: EShop1,
-    // },
+    {
+      title: "AI Blog Posting APP",
+      description:
+        "Developed a Next.js blog application with AI content generation capabilities implementing a custom API route that integrates with GitHub/Azure AI models to dynamically generate blog posts based on user prompts",
+      imgUrl: AI,
+      githubRepo: "https://github.com/Amr-Ezz/AI_Blog",
+      liveDemo: "https://ai-blog-g96t-pkgs4vy9s-amr-ezzs-projects.vercel.app/",
+    },
     // {
     //   title: "Business Startup",
     //   description: "Design & Development",
@@ -42,8 +42,11 @@ const Projects = () => {
     // },
     {
       title: "Business Startup",
-      description: "Discover the latest electronics with our sleek e-commerce site built using Sanity and React Context. Enjoy a fast, seamless shopping experience for all your tech needs!",
+      description:
+        "Discover the latest electronics with our sleek e-commerce site built using Sanity and React Context. Enjoy a fast, seamless shopping experience for all your tech needs!",
       imgUrl: Ecommerce,
+      githubRepo: "https://github.com/Amr-Ezz/E-Commerce",
+      liveDemo: "https://e-commerce-l94azt1pn-amr-ezzs-projects.vercel.app/",
     },
 
     // {

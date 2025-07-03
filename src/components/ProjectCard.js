@@ -4,7 +4,7 @@ import "./ProjectCard.css";
 import { AiFillGithub } from "react-icons/ai";
 import { CgMediaLive } from "react-icons/cg";
 
-const ProjectCard = ({ title, description, imgUrl }) => {
+const ProjectCard = ({ title, description, imgUrl, liveDemo, githubRepo }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -12,7 +12,7 @@ const ProjectCard = ({ title, description, imgUrl }) => {
   return (
     <Col sm={6} md={4} className="pt-4">
       <div className="projectCard-imageBox">
-        <img src={imgUrl} alt="project-image" />
+        <img src={imgUrl} alt="project-card" />
         <h3>{title}</h3>
         <p>{description}</p>
         <div className="toggle-container">
@@ -21,17 +21,19 @@ const ProjectCard = ({ title, description, imgUrl }) => {
           </button>
           {isOpen && (
             <div className="projects-link">
-              <a
-                href="https://github.com/Amr-Ezz/E-Shop"
-                className="project-link"
-              >
+              <a href={githubRepo} className="project-link">
                 <AiFillGithub className="icon" />
                 Github Repository
               </a>
-              <a href="e-shop-virid-kappa.vercel.app" className="project-link">
-                <CgMediaLive className="icon" />
-                Live Demo
-              </a>
+              {liveDemo && (
+                <a
+                  href={liveDemo}
+                  className="project-link"
+                >
+                  <CgMediaLive className="icon" />
+                  Live Demo
+                </a>
+              )}
             </div>
           )}
         </div>
