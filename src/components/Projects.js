@@ -11,6 +11,7 @@ import Anime from "../assets/Anime.png";
 import NFTimage1 from "../assets/NFTGameHub1.png";
 import EShop from "../assets/E-Shop.png";
 import AI from "../assets/AI.png";
+import Analytics from "../assets/analytics.png";
 
 const Projects = () => {
   const projects = [
@@ -29,6 +30,14 @@ const Projects = () => {
       imgUrl: AI,
       githubRepo: "https://github.com/Amr-Ezz/AI_Blog",
       liveDemo: "https://ai-blog-g96t-pkgs4vy9s-amr-ezzs-projects.vercel.app/",
+    },
+    {
+      title: "Business Analytics Dashboard",
+      description:
+        "Developed a comprehensive analytics dashboard using React and Chart.js, enabling real-time data visualization and insights for business decision-making.",
+      imgUrl: Analytics,
+      githubRepo: "https://github.com/Amr-Ezz/analytics-dashboard",
+      liveDemo: "https://analytics-dashboard-tan-one.vercel.app/",
     },
     // {
     //   title: "Business Startup",

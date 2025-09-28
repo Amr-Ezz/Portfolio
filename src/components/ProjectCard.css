@@ -1,12 +1,13 @@
 .projectCard-imageBox {
-  /* display: grid;
-  grid-template-rows: repeat(3, 1fr); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: rgba(45, 30, 80, 0.8);
   width: 320px;
   max-width: 420px;
   padding: 20px;
   margin-top: 10px;
-  height: auto;
+  height: 100%;
   box-shadow: 0 4px 25px rgba(123, 67, 255, 0.3);
   border-radius: 15px;
 

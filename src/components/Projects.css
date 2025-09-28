@@ -3,11 +3,14 @@
   position: relative;
   background-color: black;
 }
+
 .project h2 {
   font-size: 45px;
   font-weight: 700;
   text-align: center;
+  color: #fff;
 }
+
 .project p {
   color: #b8b8b8;
   font-size: 18px;
@@ -17,15 +20,19 @@
   text-align: start;
   width: 100%;
 }
+
+/* Nav Pills */
 .project .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
 }
+
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
 }
+
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
@@ -40,6 +47,7 @@
   text-align: center;
   z-index: 0;
 }
+
 .project .nav.nav-pills .nav-link::before {
   content: "";
   position: absolute;
@@ -51,12 +59,15 @@
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
+
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
 }
+
 .project .nav.nav-pills .nav-link.active {
   border: 1px solid rgba(255, 255, 255, 1);
 }
+
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 55px 0px 0px 55px;
@@ -68,6 +79,42 @@
 .nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
+}
+
+/* Cards */
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-body {
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .project h2 {
+    font-size: 36px;
+  }
+  .project p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .project h2 {
+    font-size: 28px;
+  }
+  .project p {
+    font-size: 15px;
+  }
 }
 
 .background-img-right {
