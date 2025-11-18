@@ -22,9 +22,11 @@ const NavBar = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
+
   return (
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
       <Container>
@@ -55,11 +57,20 @@ const NavBar = () => {
               Skills
             </Nav.Link>
             <Nav.Link
-              href="#projects"
+              href="#experience"
               className={
-                activeLink === "projects" ? "active navbar-link" : "navbar-link"
+                activeLink === "experience" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("projects")}
+              onClick={() => onUpdateActiveLink("experience")}
+            >
+              Experience
+            </Nav.Link>
+            <Nav.Link
+              href="#project"
+              className={
+                activeLink === "project" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("project")}
             >
               Projects
             </Nav.Link>
@@ -76,7 +87,6 @@ const NavBar = () => {
                 <img src={navIcon3} alt="" />
               </a> */}
             </div>
-
             <button className="vvd">
               <span>Let's Connect</span>
             </button>
